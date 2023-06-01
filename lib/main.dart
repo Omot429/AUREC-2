@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'Screens/login.dart';
 
 void main() {
-  runApp(myApp());
+  runApp(const myApp());
 }
 
 class myApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Aurec',
       theme: ThemeData(
           // primarySwatch: Colors.blue,
           ),
