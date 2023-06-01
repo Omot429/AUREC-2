@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:staffdirectory/login.dart';
+import 'Screens/login.dart';
 
 void main() {
-  runApp(myApp(MaterialApp as Function(Key? key)));
+  runApp(myApp());
 }
 
-class myApp extends StatelessWidget {  
+class myApp extends StatelessWidget {
+  const myApp({super.key});
+
   // ignore: use_function_type_syntax_for_parameters
-  const myApp((Key? key)) : super(key: key);
+  //const myApp((Key? key)) : super(key: key);
 
-
-@override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // primarySwatch: Colors.blue,
-      ),
+          // primarySwatch: Colors.blue,
+          ),
       home: const LoginPage(),
-    ); 
+    );
   }
 }
- 
