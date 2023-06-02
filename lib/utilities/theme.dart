@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FooderlichTheme {
+class AurecTheme {
   // 1
   static TextTheme lightTextTheme = TextTheme(
     bodyLarge: GoogleFonts.openSans(

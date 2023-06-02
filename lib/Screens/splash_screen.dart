@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.green,
+        color: Theme.of(context).primaryColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -26,12 +26,12 @@ class SplashScreen extends StatelessWidget {
                     fontSize: 32.0,
                     fontWeight: FontWeight.bold,
                   ),
-                  speed: const Duration(milliseconds: 2000),
+                  speed: const Duration(milliseconds: 250),
                 ),
               ],
               isRepeatingAnimation: false,
               //totalRepeatCount: 0,
-              pause: const Duration(milliseconds: 100),
+              pause: const Duration(milliseconds: 10),
               displayFullTextOnTap: true,
               stopPauseOnTap: true,
               onFinished: () {

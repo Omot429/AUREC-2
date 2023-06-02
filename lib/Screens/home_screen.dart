@@ -10,12 +10,15 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(),
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(
+          label: 'Home',
           icon: Icon(Icons.home),
         ),
         BottomNavigationBarItem(
+          label: 'Profile',
           icon: Icon(Icons.person),
         ),
         BottomNavigationBarItem(
+          label: 'Settings',
           icon: Icon(Icons.settings),
         ),
       ]),
