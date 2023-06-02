@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:staffdirectory/Screens/home_screen.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+  static String id = 'loginScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +20,14 @@ class LoginPage extends StatelessWidget {
               _inputField(context),
               _forgotPassword(context),
               _signup(context),
+              SizedBox(
+                height: 50,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, HomeScreen.id);
+                  },
+                  child: Text('GO TO HOME PAGE')),
             ],
           ),
         ),

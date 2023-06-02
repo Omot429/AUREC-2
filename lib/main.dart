@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'Screens/login.dart';
+import 'package:staffdirectory/Screens/login_screen.dart';
+import 'package:staffdirectory/Screens/splash_screen.dart';
+
+import 'Screens/home_screen.dart';
 
 void main() {
   runApp(const myApp());
@@ -19,7 +22,12 @@ class myApp extends StatelessWidget {
       theme: ThemeData(
           // primarySwatch: Colors.blue,
           ),
-      home: const LoginPage(),
+      initialRoute: SplashScreen.id,
+      routes: {
+        SplashScreen.id: (context) => const SplashScreen(),
+        HomeScreen.id: (context) => const HomeScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
+      },
     );
   }
 }
