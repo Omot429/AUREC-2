@@ -9,28 +9,37 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      color: Colors.indigo,
-      child: AnimatedTextKit(
-        animatedTexts: [
-          TypewriterAnimatedText(
-            'A U R E C',
-            textStyle: const TextStyle(
-              fontSize: 32.0,
-              fontWeight: FontWeight.bold,
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        color: Colors.green,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'A U R E C',
+                  textStyle: const TextStyle(
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  speed: const Duration(milliseconds: 2000),
+                ),
+              ],
+              isRepeatingAnimation: false,
+              //totalRepeatCount: 0,
+              pause: const Duration(milliseconds: 100),
+              displayFullTextOnTap: true,
+              stopPauseOnTap: true,
+              onFinished: () {
+                Navigator.pushNamed(context, LoginScreen.id);
+              },
             ),
-            speed: const Duration(milliseconds: 2000),
-          ),
-        ],
-        totalRepeatCount: 4,
-        pause: const Duration(milliseconds: 1000),
-        displayFullTextOnTap: true,
-        stopPauseOnTap: true,
-        onFinished: () {
-          Navigator.pushNamed(context, LoginScreen.id);
-        },
+          ],
+        ),
       ),
     );
   }
